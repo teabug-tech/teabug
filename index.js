@@ -5,22 +5,13 @@ let pixels = document.getElementsByClassName("pixel");
 
 Array.from(pixels).forEach((e) => {
     e.style.backgroundColor = colorArray[Math.floor(Math.random() * 2)];
+    let pixelEdgePx = Math.floor(card.offsetWidth / 29);
+    let pixelEdgeVw = (pixelEdgePx * 80) / card.offsetWidth;
+    e.style.width = `${pixelEdgeVw}vw`;
+    e.style.height = `${pixelEdgeVw}vw`;
 });
 
 /*
-function pixelate() {
-    card.innerHTML = "";
-    for (i = 0; i < 29 * 14; i++) {
-        let newSquare = document.createElement("div");
-        newSquare.style.width = "55px";
-        newSquare.style.height = "55px";
-        newSquare.style.backgroundColor =
-            colorArray[Math.floor(Math.random() * 2)];
-        card.appendChild(newSquare);
-    }
-}
-*/
-
 function pixelate(numSquaresHor, numSquaresVer, pixelWidth, pixelHeight) {
     card.innerHTML = "";
     card.style.backgroundColor = "#ffffff";
@@ -59,3 +50,4 @@ function animatePixels() {
         }, 5);
     }
 }
+*/
