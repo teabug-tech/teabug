@@ -1,24 +1,34 @@
 let card = document.getElementById("card");
+let section = document.getElementsByTagName("Section")[0];
 let cardWidthPx = card.offsetWidth;
 let corners = Array.from(document.getElementById("corners").children);
 let pixels = Array.from(document.getElementsByClassName("pixel"));
-let pixelEdgePx = Math.floor(cardWidthPx / 29);
-let pixelEdgeVw = (pixelEdgePx * 80) / cardWidthPx;
-const colorArray = ["#ECECEC", "#FFFFFF"];
+// let pixelEdgePx = Math.floor(cardWidthPx / 29);
+// let pixelEdgeVw = (pixelEdgePx * 80) / cardWidthPx;
+const colorArray = ["#E6E6E6", "#FFFFFF"];
 
 function displayOneCorner() {
     corners.forEach((corner) => {
-        corner.style.display = "none";
+        if (corner.tagName == "DIV") {
+            corner.style.display = "none";
+        }
     });
-    let randomCorner = corners[Math.floor(Math.random() * 4)];
+    let randomCorner = corners[Math.floor(Math.random() * 4) + 1];
     randomCorner.style.display = "block";
+    /*
+    if (randomCorner.getAttribute("id").includes("top")) {
+        section.style.paddingBottom = "0";
+        section.style.paddingTop = "2.75862vw";
+    } else if (randomCorner.getAttribute("id").includes("bottom")) {
+        section.style.paddingTop = "0";
+        section.style.paddingBottom = "2.75862vw";
+    }
+    */
 }
 
 displayOneCorner();
 
 pixels.forEach((pixel) => {
-    pixel.style.width = `${pixelEdgeVw}vw`;
-    pixel.style.height = `${pixelEdgeVw}vw`;
     pixel.style.backgroundColor = colorArray[Math.floor(Math.random() * 2)];
 });
 
@@ -28,9 +38,13 @@ function pixelate() {
     });
 }
 
-function animatePixels() {
+function animatePixels(e) {
+    document.getElementsByClassName("focused")[0].classList.remove("focused");
+    e.classList.add("focused");
     corners.forEach((corner) => {
-        corner.style.display = "block";
+        if (corner.tagName == "DIV") {
+            corner.style.display = "block";
+        }
     });
     let timerId = setInterval(pixelate, 100);
     setTimeout(() => {
