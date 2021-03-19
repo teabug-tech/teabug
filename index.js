@@ -5,7 +5,7 @@ let corners = Array.from(document.getElementById("corners").children);
 let pixels = Array.from(document.getElementsByClassName("pixel"));
 // let pixelEdgePx = Math.floor(cardWidthPx / 29);
 // let pixelEdgeVw = (pixelEdgePx * 80) / cardWidthPx;
-const colorArray = ["#e6e6e6", "#ffffff"];
+const colorArray = ["#ececec", "#ffffff"];
 
 function displayOneCorner() {
     corners.forEach((corner) => {
