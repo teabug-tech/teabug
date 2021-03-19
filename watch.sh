@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # run live-server, watch Sass and Autoprefixer
-live-server & sass --watch ./index.scss ./index.css & npx postcss ./index.css -w --use autoprefixer -o ./style.css
+live-server & sass --watch ./assets/styles/scss/index.scss ./assets/styles/css/index.css & npx postcss ./assets/styles/css/index.css -w --use autoprefixer -o ./assets/styles/css/style.css
