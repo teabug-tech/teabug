@@ -1,0 +1,97 @@
+$pixelEdge: calc(11px + 1.6vw);
+
+#corners {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.pixel {
+    width: $pixelEdge;
+    height: $pixelEdge;
+}
+
+#top-left {
+    #row1 {
+        div {
+            float: left;
+        }
+    }
+    #row2,
+    #row3,
+    #row4,
+    #row5 {
+        div {
+            float: left;
+        }
+        div:nth-child(1) {
+            clear: left;
+        }
+    }
+}
+
+#top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    #row1 {
+        div {
+            float: right;
+        }
+    }
+    #row2,
+    #row3,
+    #row4,
+    #row5 {
+        div {
+            float: right;
+        }
+        div:first-child {
+            clear: right;
+        }
+    }
+}
+
+#bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    #row5 {
+        div {
+            float: left;
+        }
+    }
+    #row1,
+    #row2,
+    #row3,
+    #row4 {
+        div {
+            float: left;
+        }
+        div:nth-child(1) {
+            clear: left;
+        }
+    }
+}
+
+#bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    #row5 {
+        div {
+            float: right;
+        }
+    }
+    #row1,
+    #row2,
+    #row3,
+    #row4 {
+        div {
+            float: right;
+        }
+        div:first-child {
+            clear: right;
+        }
+    }
+}

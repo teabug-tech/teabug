@@ -1,0 +1,54 @@
+$pixelEdge: calc(11px + 1.6vw);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "VT323", monospace;
+}
+
+@media (max-width: 822px) {
+  section {
+    flex-direction: column;
+    height: 61vh;
+    justify-content: space-evenly;
+    .figure .figure-content {
+      margin: auto;
+      width: calc(50px + 15vw);
+    }
+    .description {
+      width: 100%;
+    }
+    .description .description-content {
+      text-align: center;
+      font-size: calc(13px + 1vw);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  #nav1 ul li:nth-last-child(-n + 3) {
+    display: none;
+  }
+  #nav2,
+  #nav2 ul li:nth-last-child(-n + 3) {
+    display: block;
+  }
+  #nav1,
+  #nav2 {
+    li:not(#logo) {
+      a {
+        font-size: calc(11px + 3vw);
+      }
+    }
+  }
+}
