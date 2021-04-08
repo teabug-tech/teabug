@@ -53,7 +53,6 @@ nav a {
   display: inline-block;
   width: calc(11px + 1.6vw);
   height: calc(11px + 1.6vw);
-  background-color: #949494;
 }
 
 #logotype {
