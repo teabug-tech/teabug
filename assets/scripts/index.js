@@ -5,6 +5,9 @@ let corners = Array.from(document.getElementById("corners").children);
 let pixels = Array.from(document.getElementsByClassName("pixel"));
 const colorArray = ["#ececec", "#ffffff"];
 
+displayOneCorner();
+pixelate();
+
 function displayOneCorner() {
     corners.forEach((corner) => {
         if (corner.tagName == "DIV") {
@@ -14,12 +17,6 @@ function displayOneCorner() {
     let randomCorner = corners[Math.floor(Math.random() * 4) + 1];
     randomCorner.style.display = "block";
 }
-
-displayOneCorner();
-
-pixels.forEach((pixel) => {
-    pixel.style.backgroundColor = colorArray[Math.floor(Math.random() * 2)];
-});
 
 function pixelate() {
     pixels.forEach((pixel) => {
