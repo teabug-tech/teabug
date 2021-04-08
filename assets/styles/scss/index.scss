@@ -54,36 +54,10 @@ nav a {
 }
 
 #logomark {
-    display: grid;
+    display: inline-block;
     width: $pixelEdge;
     height: $pixelEdge;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-}
-
-#logomark .stroke {
-    background-color: #485e33;
-}
-
-#logomark .body {
-    background-color: #bbd37a;
-}
-
-#logomark .body-shadow {
-    background-color: #8eaa4f;
-}
-
-#logomark .left-eye,
-.right-eye {
-    background-color: #302c2b;
-}
-
-#logomark .body-lighting-1 {
-    background-color: #ecefe6;
-}
-
-#logomark .body-lighting-2 {
-    background-color: #d9e6af;
+    background-color: #949494;
 }
 
 #logotype {
