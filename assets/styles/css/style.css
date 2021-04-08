@@ -252,12 +252,12 @@ section .description .description-content .br {
   }
 }
 @media (max-width: 640px) {
-  #nav1 ul li:nth-last-child(-n+3) {
+  #nav1 li:nth-last-child(-n+3) {
     display: none;
   }
 
   #nav2,
-#nav2 ul li:nth-last-child(-n+3) {
+#nav2 li {
     display: block;
   }
 
