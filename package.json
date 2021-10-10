@@ -1,0 +1,26 @@
+{
+  "name": "teabug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teabug-tech/teabug.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teabug-tech/teabug/issues"
+  },
+  "homepage": "https://github.com/teabug-tech/teabug#readme",
+  "dependencies": {
+    "autoprefixer": "^10.3.7",
+    "live-server": "^1.2.1",
+    "postcss": "^8.3.9",
+    "sass": "^1.42.1"
+  }
+}
