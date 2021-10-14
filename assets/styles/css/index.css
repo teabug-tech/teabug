@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  font-family: "VT323", monospace;
+  font-family: "Anonymous Pro", monospace;
 }
 
 nav {
@@ -32,7 +32,12 @@ nav ul li:not(#logo) {
 nav a {
   text-decoration: none;
   color: #949494;
-  font-size: calc(11px + 1.6vw);
+  font-size: calc(9px + 1vw);
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: #4c5d38;
 }
 
 #nav2,
@@ -58,7 +63,7 @@ nav a {
 #logotype {
   margin-left: 0.9vw;
   font-weight: bold;
-  font-size: calc(20px + 1.6vw);
+  font-size: calc(18px + 1vw);
 }
 
 #card {
@@ -165,15 +170,12 @@ section {
   height: 40vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 10vw;
   z-index: 100;
 }
 section .figure {
-  width: 50%;
-  display: flex;
-}
-section .figure .figure-content {
-  width: 80%;
+  width: 21vw;
 }
 section .description {
   width: 50%;
@@ -182,7 +184,8 @@ section .description {
 section .description .description-content {
   flex-direction: column;
   align-items: center;
-  font-size: calc(6px + 1.9vw);
+  font-size: calc(5px + 1vw);
+  font-weight: 400;
   line-height: 1.1em;
 }
 section .description .description-content .br {
@@ -195,8 +198,7 @@ section .description .description-content .br {
     height: 61vh;
     justify-content: space-evenly;
   }
-  section .figure .figure-content {
-    margin: auto;
+  section .figure {
     width: calc(50px + 15vw);
   }
   section .description {
@@ -204,7 +206,7 @@ section .description .description-content .br {
   }
   section .description .description-content {
     text-align: center;
-    font-size: calc(13px + 1vw);
+    font-size: calc(10px + 1vw);
   }
 }
 @media (max-width: 640px) {
@@ -219,7 +221,7 @@ section .description .description-content .br {
 
   #nav1 li:not(#logo) a,
 #nav2 li:not(#logo) a {
-    font-size: calc(11px + 3vw);
+    font-size: calc(9px + 2vw);
   }
 }
 
